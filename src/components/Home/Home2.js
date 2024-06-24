@@ -62,10 +62,6 @@ function Home2() {
         <Row>
           <Col md={12} className="home-about-social">
             <h1>NAJDETE MĚ NA</h1>
-            <p>
-              Neváhejte se se mnou <span className="purple">spojit </span>
-              <NewsletterForm />
-            </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
