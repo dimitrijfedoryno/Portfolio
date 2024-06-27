@@ -7,6 +7,8 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Zivotopis from "./components/Resume/Zivotopis";
 import NewsletterForm from './components/NewsletterForm';
+import Blog from './components/blog/blog'; // Import Blog component
+import Post from './components/blog/[slug]'; // Import Post component
 import {
   BrowserRouter as Router,
   Route,
@@ -17,13 +19,14 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/blog/blog.css"; // Import your custom CSS
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
@@ -39,9 +42,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Zivotopis" element={<Zivotopis />} />
+          <Route path="/zivotopis" element={<Zivotopis />} />
+          <Route path="/blog" element={<Blog />} /> {/* Add Blog route */}
+          <Route path="/blog/:slug" element={<Post />} /> {/* Add dynamic Post route */}
           <Route path="*" element={<Navigate to="/"/>} />
-          
         </Routes>
         <Footer />
       </div>
