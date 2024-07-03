@@ -1,10 +1,14 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import posts from './postsData.json';
 import './blog.css'; // Import custom CSS for additional styles
 
 const Blog = () => {
   return (
+    
+  <Container fluid className="about-section">
+    <Container>
     <div className="container py-4">
       <h1 className="text-center mb-5">Blog</h1>
       <div className="row">
@@ -21,6 +25,8 @@ const Blog = () => {
         ))}
       </div>
     </div>
+    </Container>
+  </Container>
   );
 };
 

@@ -25,7 +25,7 @@ function Home2() {
               <br />
               <br />Plynně ovládám klasiky jako
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> C++, Javascript a Go. </b>
               </i>
               <br />
               <br />

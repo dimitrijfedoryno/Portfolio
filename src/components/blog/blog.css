@@ -15,4 +15,8 @@
   .content {
     line-height: 1.6;
   }
+
+  .content p {
+    color: white;
+  }
   

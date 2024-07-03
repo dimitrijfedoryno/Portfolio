@@ -19,7 +19,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./components/blog/blog.css"; // Import your custom CSS
+import "./components/blog/blog.css"; // Import custom CSS for additional styles
 
 function App() {
   const [load, updateLoad] = useState(true);
