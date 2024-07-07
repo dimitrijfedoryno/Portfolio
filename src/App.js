@@ -6,7 +6,6 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Zivotopis from "./components/Resume/Zivotopis";
-import NewsletterForm from './components/NewsletterForm';
 import Blog from './components/blog/blog'; // Import Blog component
 import Post from './components/blog/[slug]'; // Import Post component
 import {
