@@ -1,23 +1,7 @@
 ---
-title: 'Hello World'
-date: '2023-06-27'
+title: 'Příspěvky'
+date: '27.3.2024'
 ---
+## Až něco napíšu, tak to bude tady :)
 
-This is my first blog post!
-This is my first blog post!This is my first blog post!This is my first blog post!This is my first blog post!This is my first blog post!This is my first blog post!
-This is my first blog post!
-This is my first blog post!
-This is my first blog post! \
-This is my first blog post!\
-This is my first blog post!\
-This is my first blog post!\
-v
-v
-v
-This is my first blog post!v
-asd
-fa
-sdfa
-sdf
-asdf
-af
+Zatím to zůstane takhle.

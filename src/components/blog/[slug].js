@@ -30,7 +30,7 @@ const Post = () => {
     <div className="blog-container" style={{ marginTop: '60px' }}>
     <div className="container blog-container py-4">
       <h1 className="mb-4">{post.title}</h1>
-      <div className="content" dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+      <div className="content prispevek" dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
     </div>
     </div>
   );
