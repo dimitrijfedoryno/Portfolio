@@ -12,16 +12,19 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
+  useLocation
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/blog/blog.css"; // Import custom CSS for additional styles
+import { initGA, logPageView } from './analytics';
 
-function App() {
+const App = () => {
   const [load, updateLoad] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,25 +34,36 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/zivotopis" element={<Zivotopis />} />
-          <Route path="/blog" element={<Blog />} /> {/* Add Blog route */}
-          <Route path="/blog/:slug" element={<Post />} /> {/* Add dynamic Post route */}
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+  useEffect(() => {
+    initGA();
+  }, []);
 
-export default App;
+  useEffect(() => {
+    logPageView();
+  }, [location]);
+
+  return (
+    <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <Preloader load={load} />
+      <Navbar />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/zivotopis" element={<Zivotopis />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="*" element={<Navigate to="/"/>} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+};
+
+const Root = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default Root;

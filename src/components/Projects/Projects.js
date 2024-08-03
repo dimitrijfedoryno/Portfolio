@@ -23,8 +23,8 @@ function Projects() {
               isBlog={false}
               title="Minecraft cover page"
               description="Jednoduchá úvodní stránka pro Minecraft servery, která zobrazuje informace o serveru jako IP adresu, aktuální počet hráčů a jejich herní statistiky. Uživatelé mohou rychle získat přehled o stavu serveru a připojit se prostřednictvím odkazu na IP adresu."
-              ghLink="#"
-              demoLink="https://github.com/dimitrijfedoryno/minecraft-server-cover-page.git"
+              ghLink="https://github.com/dimitrijfedoryno/minecraft-server-cover-page.git"
+              demoLink="https://minecraft.fedoryno.cz"
             />
           </Col>
 
@@ -35,7 +35,7 @@ function Projects() {
               title="DIY Kalkulačka"
               description="Nástroj, který usnadní vaperům výpočet parametrů spirálek pro jejich vapovací zařízení a optimalizaci poměrů míchání liquidů."
               ghLink="#"
-              demoLink="#"
+              demoLink="https://kalkulacka.fedoryno.cz/"
             />
           </Col>
 
